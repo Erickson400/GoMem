@@ -1,0 +1,44 @@
+
+
+--open process by pid  (BigEndian ? bool)
+--open process by name (BigEndian ? bool)
+
+--read int8
+--read int16
+--read int32
+--read int64
+--read float32
+--read float64
+--read slice(type, size) return slice
+
+--write int8
+--write int16
+--write int32
+--write int64
+--write float32
+--write float64
+--write slice(data)
+
+-Vector3 struct
+-read vector3
+-write vector3
+
+-Pointer Struct
+-make pointer(type, baseAddress+baseOffset, []offsets)
+-Pointer set value
+-Pointer get value
+
+
+
+
+winfr C: D:\sus /regular /n Users\munoz\Documents\GitHub\GoMem\windows
+
+
+
+
+
+
+
+
+
+
