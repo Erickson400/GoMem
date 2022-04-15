@@ -1,44 +1,35 @@
 
+ProcessByPid(pid uint32, bigEndian bool) (Process, error)
+ProcessByName(name string, bigEndian bool) (Process, error)
 
---open process by pid  (BigEndian ? bool)
---open process by name (BigEndian ? bool)
+Process:
+	ReadInt8(address uintptr) (int8, error)
+	ReadInt16(address uintptr) (int16, error)
+	ReadInt32(address uintptr) (int32, error)
+	ReadInt64(address uintptr) (int64, error)
+	ReadFloat32(address uintptr) (float32, error)
+	ReadFloat64(address uintptr) (float64, error)
+	ReadSlice(address uintptr, dataType string, size int) (any, error)
 
---read int8
---read int16
---read int32
---read int64
---read float32
---read float64
---read slice(type, size) return slice
+	WriteInt8(address uintptr, data int8) error
+	WriteInt16(address uintptr, data int16) error
+	WriteInt32(address uintptr, data int32) error
+	WriteInt64(address uintptr, data int64) error
+	WriteFloat32(address uintptr, data float32) error
+	WriteFloat64(address uintptr, data float64) error
 
---write int8
---write int16
---write int32
---write int64
---write float32
---write float64
---write slice(data)
+Vector2{x,y,z}:
+	ReadVector2(address uintptr) Vector2
+	WriteVector2(address uintptr, vec Vector2)
+	Add(vec Vector2)
+	Sub(vec Vector2)
+	Mul(vec Vector2)
+	Div(vec Vector2)
 
--Vector3 struct
--read vector3
--write vector3
-
--Pointer Struct
--make pointer(type, baseAddress+baseOffset, []offsets)
--Pointer set value
--Pointer get value
-
-
-
-
-winfr C: D:\sus /regular /n Users\munoz\Documents\GitHub\GoMem\windows
-
-
-
-
-
-
-
-
-
-
+Vector3{x,y,z}:
+	ReadVector3(address uintptr) Vector3
+	WriteVector3(address uintptr, vec Vector3)
+	Add(vec Vector3)
+	Sub(vec Vector3)
+	Mul(vec Vector3)
+	Div(vec Vector3)
