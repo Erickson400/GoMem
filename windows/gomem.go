@@ -299,15 +299,15 @@ func (p *Process) WriteFloat64(address uintptr, data float64) error {
 }
 
 type Vector3 struct {
-	x, y, z float32
+	X, Y, Z float32
 }
 
 func (p *Process) ReadVector3(address uintptr) Vector3 {
 	var err error
 	vec := Vector3{0, 0, 0}
-	vec.x, err = p.ReadFloat32(address)
-	vec.y, err = p.ReadFloat32(address + 4)
-	vec.z, err = p.ReadFloat32(address + 8)
+	vec.X, err = p.ReadFloat32(address)
+	vec.Y, err = p.ReadFloat32(address + 4)
+	vec.Z, err = p.ReadFloat32(address + 8)
 	if err != nil {
 		fmt.Printf("Could not read vector 3 %s", err)
 		return Vector3{0, 0, 0}
@@ -317,47 +317,47 @@ func (p *Process) ReadVector3(address uintptr) Vector3 {
 
 func (p *Process) WriteVector3(address uintptr, vec Vector3) {
 	var err error
-	err = p.WriteFloat32(address, vec.x)
-	err = p.WriteFloat32(address+4, vec.y)
-	err = p.WriteFloat32(address+8, vec.z)
+	err = p.WriteFloat32(address, vec.X)
+	err = p.WriteFloat32(address+4, vec.Y)
+	err = p.WriteFloat32(address+8, vec.Z)
 	if err != nil {
 		fmt.Printf("Could not write vector 3 %s", err)
 	}
 }
 
 func (v *Vector3) Add(vec Vector3) {
-	v.x += vec.x
-	v.y += vec.y
-	v.z += vec.z
+	v.X += vec.X
+	v.Y += vec.Y
+	v.Z += vec.Z
 }
 
 func (v *Vector3) Sub(vec Vector3) {
-	v.x -= vec.x
-	v.y -= vec.y
-	v.z -= vec.z
+	v.X -= vec.X
+	v.Y -= vec.Y
+	v.Z -= vec.Z
 }
 
 func (v *Vector3) Mul(vec Vector3) {
-	v.x += vec.x
-	v.y += vec.y
-	v.z += vec.z
+	v.X += vec.X
+	v.Y += vec.Y
+	v.Z += vec.Z
 }
 
 func (v *Vector3) Div(vec Vector3) {
-	v.x /= vec.x
-	v.y /= vec.y
-	v.z /= vec.z
+	v.X /= vec.X
+	v.Y /= vec.Y
+	v.Z /= vec.Z
 }
 
 type Vector2 struct {
-	x, y float32
+	X, Y float32
 }
 
 func (p *Process) ReadVector2(address uintptr) Vector2 {
 	var err error
 	vec := Vector2{0, 0}
-	vec.x, err = p.ReadFloat32(address)
-	vec.y, err = p.ReadFloat32(address + 4)
+	vec.X, err = p.ReadFloat32(address)
+	vec.Y, err = p.ReadFloat32(address + 4)
 	if err != nil {
 		fmt.Printf("Could not read vector 2 %s", err)
 		return Vector2{0, 0}
@@ -367,29 +367,29 @@ func (p *Process) ReadVector2(address uintptr) Vector2 {
 
 func (p *Process) WriteVector2(address uintptr, vec Vector2) {
 	var err error
-	err = p.WriteFloat32(address, vec.x)
-	err = p.WriteFloat32(address+4, vec.y)
+	err = p.WriteFloat32(address, vec.X)
+	err = p.WriteFloat32(address+4, vec.Y)
 	if err != nil {
 		fmt.Printf("Could not write vector 2 %s", err)
 	}
 }
 
 func (v *Vector2) Add(vec Vector2) {
-	v.x += vec.x
-	v.y += vec.y
+	v.X += vec.X
+	v.Y += vec.Y
 }
 
 func (v *Vector2) Sub(vec Vector2) {
-	v.x -= vec.x
-	v.y -= vec.y
+	v.X -= vec.X
+	v.Y -= vec.Y
 }
 
 func (v *Vector2) Mul(vec Vector2) {
-	v.x += vec.x
-	v.y += vec.y
+	v.X += vec.X
+	v.Y += vec.Y
 }
 
 func (v *Vector2) Div(vec Vector2) {
-	v.x /= vec.x
-	v.y /= vec.y
+	v.X /= vec.X
+	v.Y /= vec.Y
 }

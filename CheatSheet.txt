@@ -18,7 +18,7 @@ Process:
 	WriteFloat32(address uintptr, data float32) error
 	WriteFloat64(address uintptr, data float64) error
 
-Vector2{x,y,z}:
+Vector2{X,Y}:
 	ReadVector2(address uintptr) Vector2
 	WriteVector2(address uintptr, vec Vector2)
 	Add(vec Vector2)
@@ -26,7 +26,7 @@ Vector2{x,y,z}:
 	Mul(vec Vector2)
 	Div(vec Vector2)
 
-Vector3{x,y,z}:
+Vector3{X,Y,Z}:
 	ReadVector3(address uintptr) Vector3
 	WriteVector3(address uintptr, vec Vector3)
 	Add(vec Vector3)
