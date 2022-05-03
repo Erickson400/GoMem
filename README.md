@@ -4,10 +4,8 @@
 ### GoMem
 stsdff
 
-- joe
-  - joe biden [gomem](windows/gomem.go)
-- mama
-- gay
+- aahhh
+  - aaahh uncle [gomem](windows/gomem.go)
 
 @github/support :
 ```go
