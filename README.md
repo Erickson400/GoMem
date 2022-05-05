@@ -5,6 +5,8 @@
 - This Module Reads & Writes any fundamental Go datatype into an active process.
 - It's recommended to be used together with Cheat Engine due to a lack of memory features.
 - It's best used as a building ground for a memory hacking engine. You might want to wrap it around some GUI or key inputs.
+
+Check out the [Cheat Sheet](CheatSheet.txt) for all the functions the module provides.
 ```go
 package main
 
