@@ -12,7 +12,7 @@ package main
 
 import (
 	"fmt"
-	gomem "github.com/Erickson400/GoMem"
+	gomem "github.com/Erickson400/GoMem/windows"
 	"time"
 )
 
