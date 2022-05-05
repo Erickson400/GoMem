@@ -42,6 +42,7 @@ func main() {
 ```
 ### Install for Windows:
 Just a normal go module import from github.
+
 In your terminal:
 > go get github.com/Erickson400/GoMem/windows
 
@@ -50,9 +51,7 @@ then import it into your go code with
 import "github.com/Erickson400/GoMem/windows"
 ```
 
+A Special thanks to the [PyMeow Developer @qb-0](https://github.com/qb-0/PyMeow) for helping me out.
+I wanted to make a port of PyMeow to Go, but Instead i made my own twist to his library.
 
-
-[gomem](windows/gomem.go)
-
-@github/support :
 
